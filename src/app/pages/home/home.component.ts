@@ -1,15 +1,13 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-home',
-  template: `
-    <p>
-      home works!
-    </p>
-  `,
-  styles: [
-  ]
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styles: [],
 })
 export class HomeComponent {
-
+  cols = 3;
+  onColumnsCountChange(colsNum: number): void {
+    this.cols = colsNum;
+  }
 }
