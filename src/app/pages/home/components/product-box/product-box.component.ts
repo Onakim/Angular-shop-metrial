@@ -8,14 +8,7 @@ import { Product } from "src/app/models/product.model";
 })
 export class ProductBoxComponent {
   @Input() fullWhidthMode = false;
-  product: Product | undefined = {
-    id: 1,
-    title: "Snickers",
-    price: 15,
-    category: "shoes",
-    description: "Description",
-    image: "https://via.placeholder.com/150",
-  };
+  @Input() product: Product | undefined;
   @Output() addToCard = new EventEmitter();
   onAddToCard(): void {
     this.addToCard.emit(this.product);
